@@ -1,0 +1,14 @@
+# [features]
+# seeds = false
+[programs.localnet]
+anchor_auction = "fm41Z2bDu2ridNcZQq1gKeWHdQU8T2iwknv3ybvm1EX"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "localnet"
+wallet = "/home/muhammadzaryabrafique/.config/solana/id.json"
+
+[scripts]
+test = "yarn run mocha -t 1000000 tests/"
