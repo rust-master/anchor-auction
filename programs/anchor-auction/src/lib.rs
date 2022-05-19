@@ -47,11 +47,11 @@ pub mod anchor_auction {
         }
 
         // transfer bid pirce to custodial currency holder
-        // let cpi_accounts = Transfer {
-        //     from: ctx.accounts.from.to_account_info().clone(),
-        //     to: ctx.accounts.currency_holder.to_account_info().clone(),
-        //     authority: ctx.accounts.from_auth.to_account_info(),
-        // };
+        let cpi_accounts = Transfer {
+            from: ctx.accounts.from.to_account_info().clone(),
+            to: ctx.accounts.currency_holder.to_account_info().clone(),
+            authority: ctx.accounts.from_auth.to_account_info(),
+        };
         // let cpi_program = ctx.accounts.token_program.to_account_info();
         // let cpi_ctx = CpiContext::new(cpi_program, cpi_accounts);
         // token::transfer(cpi_ctx, price)?;
